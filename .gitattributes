@@ -1,0 +1,25 @@
+# Auto detecting text file and set line endings
+* text=auto
+.gitattributes !filter !diff
+
+# Specifying all binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+#ignore all test file and directory
+__test__ export-ignore
+test export-ignore
+*.test.js export-ignore
+
+# Ignore all uncessary folders and Files
+design export-ignore
+.env export-ignore
+.gitattributes export-ignore
+.env.example export-ignore
+.eslintignore export-ignore
+.eslintrc.yaml export-ignore
+.prettierignore export-ignore
+.prettierrc.yaml export-ignore
+nodemon.json export-ignore
+CONTRIBUTIN.md export-ignore

@@ -1,0 +1,5 @@
+"""
+Authorization directive to check whether a request is authorized
+to perform the request on a FIELD_DEFINITION or Type
+"""
+directive @auth on FIELD_DEFINITION

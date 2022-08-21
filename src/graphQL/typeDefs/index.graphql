@@ -1,0 +1,17 @@
+union AuthUnion = AuthToken | ResponseType
+
+type Query {
+  hello: String!
+}
+
+type Mutation {
+  # Authentication mutation
+  signUp(user: SignUpInput): ResponseType!
+  signIn(user: SignInInput): AuthUnion!
+
+  createMessage(message: MessageInput): String!
+}
+
+type Subscription {
+  messageCreated: Message
+}

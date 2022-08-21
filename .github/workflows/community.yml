@@ -1,0 +1,32 @@
+on:
+  fork:
+  push:
+    branches: [develop]
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+  pull_request_target:
+    types: [opened]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message:
+            "<h1>It's a great pleasure having you contribute to this
+            project</h1> We love to see more of your contribution, be it code
+            wise, idea wise, Bug related issues and just about anything that you
+            can bring to table will be much appreiated. :nerd_face: Thanks form
+            ISBAT Hub Community"
+          pr-message:
+            "<h1>We highly appreiate you for being part of this great
+            project</h1> Thank you for submitting the pull request, we will
+            review the code and give you feedback sortly. 😊"
+          footer: "Feel at home though, we got your back."

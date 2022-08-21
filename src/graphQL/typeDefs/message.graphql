@@ -1,0 +1,10 @@
+type Message {
+  id: ID!
+  text: String
+  createdBy: String
+}
+
+input MessageInput {
+  text: String
+  username: String
+}

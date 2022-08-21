@@ -1,0 +1,39 @@
+"""
+Return message return type to
+identify wheather it was a success or faild
+operation within any resolver
+"""
+type StatusType {
+  """
+  A numerical status code for the response.
+  """
+  code: Int!
+  """
+  Identifiers wheather the action perfonmed was successfully done. true | false
+  """
+  success: Boolean!
+
+  """
+  Human readable status code like -> OK for success.
+  """
+  statusCode: String!
+}
+
+type Error {
+  type: String
+  error: String
+}
+
+type ResponseType {
+  """
+  The status of a specific response to request
+  """
+  status: StatusType!
+
+  """
+  Text describing the action performed.
+  """
+  message: String!
+
+  errors: Error
+}

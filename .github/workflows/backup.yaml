@@ -1,0 +1,26 @@
+# name: Backup 2kole Database
+
+# on:
+#   schedule:
+#     # Backs up database every day at 12:00 AM UTC
+#     - cron: "0 0 * * *"
+
+# jobs:
+#   backup:
+#     name: Backup db
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout files and creating db backup directory
+#         uses: actions/checkout@v2
+#         # Defining which shell we're running
+#       - shell: bash
+#         env:
+#           MONGO_URI: ${{ secrets.MONGO_URI }}
+#           # This is the secret key to where we're going to store our backedup data.
+#           WHERE_TO_BACKUP_TO_SECRET: ${{ secrets.WHERE_TO_BACKUP_TO_SECRET }}
+
+#         run: |
+#           sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+#           mkdir 2kole-DB-BACKUP
+#           ./scripts/backup.sh $MONGO_URI $WHERE_TO_BACKUP_TO_SECRET

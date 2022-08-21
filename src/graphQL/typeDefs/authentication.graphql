@@ -1,0 +1,36 @@
+"""
+Input data for the user who is creating new account.
+"""
+input SignUpInput {
+  username: String!
+
+  """
+  A unique e-mail address for this specific user of this object.
+  """
+  email: String!
+  """
+  A password for the user of this object.
+  """
+  password: String!
+  """
+  A comfirm password to confirm the password entered not presisted in the database.
+  """
+  confirm_password: String!
+}
+
+# SignIn Input
+input SignInInput {
+  """
+  A unique e-mail address for this specific user of this object.
+  """
+  email: String!
+  """
+  A password for the user of this object.
+  """
+  password: String!
+}
+
+# Authentication Token type
+type AuthToken {
+  token: String!
+}
