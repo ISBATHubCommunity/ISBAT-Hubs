@@ -2,7 +2,9 @@ import { Schema, model } from "mongoose";
 import relationship from "./relationship";
 
 const channelSchema = new Schema({
-  name: { type: String, required: true, trim: true, max: 25 },
+  name: {
+    type: String, required: true, trim: true, max: 25,
+  },
   description: { type: String, trim: true, max: 500 },
   visibility: { type: String, default: "public", required: true },
   commmunity: { ...relationship("Community") },

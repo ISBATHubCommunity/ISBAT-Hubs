@@ -3,8 +3,11 @@ import { comparePasswords, emailValidation } from "../validations";
 import { BAD_REQUEST, CREATED, INTERNAL_SERVER_ERROR } from "../../../../constants/status-code";
 import { response } from "../../../../utilities";
 
-export default async (_parent, { user: { username, email, password, confirm_password } }, _context, _info) => {
-
+export default async (_parent, {
+  user: {
+    username, email, password, confirm_password,
+  },
+}, _context, _info) => {
   const { valid, errors } = emailValidation(email);
   if (!valid) {
     return response(

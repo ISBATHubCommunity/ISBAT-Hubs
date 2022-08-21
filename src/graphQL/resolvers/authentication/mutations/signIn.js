@@ -21,7 +21,7 @@ export default async (_parent, { user: { email, password } }, context, _info) =>
       return response(
         BAD_REQUEST, false, "BAD_REQUEST", "Wrong credentials",
         { type: "SignInError", error: "Wrong credentials please try again." },
-      )
+      );
     }
     // compare the password with password stored int db
     const verified = await bcrypt.compare(password, user.password);
@@ -30,7 +30,7 @@ export default async (_parent, { user: { email, password } }, context, _info) =>
       return response(
         BAD_REQUEST, false, "BAD_REQUEST", "Wrong credentials",
         { type: "SignInError", error: "Wrong credentials please try again." },
-      )
+      );
     }
 
     // generating the token
@@ -43,7 +43,6 @@ export default async (_parent, { user: { email, password } }, context, _info) =>
     const refresh_token = await jwt.sign(
       refresh_payload, process.env.REFRESH_TOKEN_SECRET_KEY, refresh_options,
     );
-
 
     const { res } = context;
     // set the refresh_token in the cookie.

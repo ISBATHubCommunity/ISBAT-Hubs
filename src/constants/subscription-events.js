@@ -1,10 +1,10 @@
-/**Event when new message is created. */
+/** Event when new message is created. */
 export const NEW_MESSAGE = "NEW_MESSAGE";
 
-/**Event message to triger for when a new channel is created */
+/** Event message to triger for when a new channel is created */
 export const NEW_CHANNEL = "NEW_CHANNEL";
 
-/**This event triger when a channel deleted */
+/** This event triger when a channel deleted */
 export const CHANNEL_DELETED = "CHANNEL_DELETED";
 
 /** This event will triger when a channel is updated */

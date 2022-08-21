@@ -6,7 +6,7 @@ const message = "Hello World";
 
 const hello = (parent, args) => {
   pubsub.publish("new_hello", { message });
-  return "Hello from example graphql server. :)"
+  return "Hello from example graphql server. :)";
 };
 
 export default hello;

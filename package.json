@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "pkg-upgrade": "yarn upgrade-interactive --latest",
     "lint": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore",
-    "lint-fix": "node ./node_modules/eslint/bin/eslint . --fix --ext .js",
+    "lint:fix": "node ./node_modules/eslint/bin/eslint . --fix --ext .js",
     "test": "jest --detectOpenHandles",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage --forceExit",

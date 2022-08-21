@@ -1,3 +1,4 @@
+/* eslint-disable import/no-mutable-exports */
 /**
  * This is where the type definition are merge into a single file
  * rather than implementing or writting all the type definition
